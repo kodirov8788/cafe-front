@@ -1,24 +1,65 @@
 .menu {
     grid-template-columns: 1fr 1fr;
     display: grid;
-    border: 1px solid red;
-    width: 50%;
-    height: auto;
-    gap: 20px;
+    width: 120%;
+    height: 300px;
+    margin-top: 130px;
+    margin-left: 80px;
 }
 
-.menu div {
-    width: 250px;
-    height: 50px;
-    background: aqua;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
-
-a {
+.menu a {
     list-style: none;
     text-decoration: none;
     font-size: 18px;
+    background: white;
+    width: 220px;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #009999;
+    font-size: 22px;
+}
+
+.menu a:hover {
+    color: white;
+    background: #009999;
+    transition: 0.5s;
+}
+
+.Menu .select_stol {
+    border: 1px solid red;
+    width: 150px;
+    font-size: 18px;
+    height: 50px;
+    display: flex;
+    margin-left: 25%;
+}
+
+.select_stol option {
+    text-align: center;
+}
+
+@media (max-width:500px) {
+    .Menu .select_stol {
+        border: 1px solid red;
+        margin-left: 180px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+        margin: 80px 25px;
+        /* margin-left: 150px; */
+        width: 130%;
+        height: 200px;
+        border: 1px solid red;
+    }
+
+    .menu a {
+        width: 150px;
+        font-size: 20px;
+        height: 60px;
+        margin: auto;
+    }
 }

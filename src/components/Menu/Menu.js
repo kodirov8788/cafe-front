@@ -1,22 +1,33 @@
 import React from 'react'
 import './Menu.css'
+import { Link } from 'react-router-dom'
+import { stol } from '../../Static_data'
+import { useContext } from 'react'
+import { ProductContext } from '../../context/ProductContext'
 function Menu() {
+    const { place, setPlace } = useContext(ProductContext)
+
+    console.log(place);
     return (
         <div className='Menu'>
+
+            <select name="" className='select_stol' onChange={(e) => setPlace(e.target.value
+            )}>
+                <option value="">Joy tanlash</option>
+                {
+                    stol.map(item => (
+                        <option value={item.value} >{item.name}</option>
+                    ))
+                }
+            </select>
+
             <div className="menu">
-                <div className="">
-                    <a href="/products/issiq">issiq ichimlik</a>
-                </div>
-                <div className="">
-                    <a href="/products/gazlik">gazlik ichimlik</a>
-                </div>
-                <div className="">
-                    <a href="/products/gazsiz">gazsiz ichimlik</a>
-                </div>
-                <div className="">
-                    <a href="/products/taomlar">taomlar</a>
-                </div>
+                <Link to="/products/issiq">issiq ichimlik</Link>
+                <Link to="/products/gazlik">gazlik ichimlik</Link>
+                <Link to="/products/gazsiz">gazsiz ichimlik</Link>
+                <Link to="/products/taomlar">taomlar</Link>
             </div>
+
         </div>
     )
 }

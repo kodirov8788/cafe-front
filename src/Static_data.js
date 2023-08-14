@@ -1,9 +1,12 @@
+import img1 from './image/shopping-cart.png'
+
 export const menu_items = [
     {
         id: 1,
         name: "quyon sho'rva",
         category: "taomlar",
         price: 28000,
+        image: img1,
     },
     {
         id: 2,
@@ -121,3 +124,75 @@ export const menu_items = [
     },
 
 ]
+
+export const stol = [
+
+    {
+        id: 1,
+        name: "1 - stol",
+        value: "stol-1"
+
+    },
+    {
+        id: 2,
+        name: "2 - stol",
+        value: "stol-2"
+
+
+    },
+    {
+        id: 3,
+        name: "3 - stol",
+        value: "stol-3"
+
+
+    },
+    {
+        id: 4,
+        name: "4 - stol",
+        value: "stol-4"
+
+
+    },
+    {
+        id: 5,
+        name: "5 - stol",
+        value: "stol-5"
+
+
+    },
+    {
+        id: 6,
+        name: "6 - stol",
+        value: "stol-6"
+
+
+    },
+    {
+        id: 7,
+        name: "7 - stol",
+        value: "stol-7"
+
+
+
+    },
+    {
+        id: 8,
+        name: "8 - stol",
+        value: "stol-8"
+
+
+
+    },
+    {
+        id: 9,
+        name: "9 - stol",
+        value: "stol-9"
+    },
+    {
+        id: 10,
+        name: "10 - stol",
+        value: "stol-10"
+    }
+]
+
