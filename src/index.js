@@ -10,7 +10,7 @@ import Gazsiz from './components/Gazsiz/Gazsiz';
 import Taomlar from './components/Taomlar/Taomlar';
 import Cart from './pages/Cart/Cart';
 import { ContextProvider } from './context/ProductContext';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/navbar/Navbar';
 import Order from './pages/order/Order';
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
