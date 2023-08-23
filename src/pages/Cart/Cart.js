@@ -5,13 +5,11 @@ import Listitem from "../../components/listItem/Listitem"
 import "./Cart.css"
 import CartItems from './CartItems';
 import axios from 'axios';
-import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
 
 function Cart() {
     const { cart, place, data, addOrder } = useContext(ProductContext)
 
-    console.log(data)
+    // console.log(data)
 
 
     return (

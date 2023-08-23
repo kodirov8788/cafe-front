@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../../api/Api'
 import React, { useContext, useEffect, useState } from 'react'
 import { ProductContext } from '../../context/ProductContext'
 import Madeorderlist from './Madeorderlist'
@@ -10,7 +10,7 @@ function Madeorder() {
     useEffect(() => {
 
         const getApi = async () => {
-            await axios.get("http://localhost:8000/order/get")
+            await axios.get("order/get")
                 .then(res => {
 
                     let filtered = res?.data.filter(item => item.isready === true)

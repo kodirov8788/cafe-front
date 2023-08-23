@@ -4,7 +4,7 @@ import { createContext } from "react";
 import Pusher from 'pusher-js';
 import MP3 from "../mp33.mp3"
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import axios from "../api/Api";
 import { toast } from "react-toastify";
 import { stol } from "../Static_data";
 
@@ -21,7 +21,7 @@ export const ContextProvider = ({ children }) => {
 
         const getApi = async () => {
             try {
-                const res = await axios.get("http://localhost:8000/order/get");
+                const res = await axios.get("/order/get");
                 const box = res?.data.map(item => item.tablenumber);
 
                 const filteredTable = stol.filter(item => {
@@ -119,7 +119,7 @@ export const ContextProvider = ({ children }) => {
             order: cart,
         }
         console.log(newObj)
-        await axios.post("http://localhost:8000/order/create", newObj)
+        await axios.post("order/create", newObj)
             .then(res => {
                 toast.success("muvaffaqiyatli joylandi", {
                     position: toast.POSITION.TOP_RIGHT,

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Listitem from '../listItem/Listitem';
 function Gazsiz() {
     const [data, setData] = useState([])
-    console.log(data);
+    // console.log(data);
     useEffect(() => {
 
         const getData = () => {

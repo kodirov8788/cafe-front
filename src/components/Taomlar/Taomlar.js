@@ -10,7 +10,7 @@ import Listitem from '../listItem/Listitem'
 function Taomlar() {
     const [data, setData] = useState([])
     const { setCart, cart } = useContext(ProductContext)
-    console.log(data);
+    // console.log(data);
     useEffect(() => {
 
         const getData = () => {

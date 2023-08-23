@@ -9,10 +9,10 @@ import Listitem from '../listItem/Listitem';
 function Gazlik() {
     const { setCart, cart } = useContext(ProductContext)
 
-    console.log(cart);
+    // console.log(cart);
 
     const [data, setData] = useState([])
-    console.log(data);
+    // console.log(data);
     useEffect(() => {
 
         const getData = () => {

@@ -13,9 +13,6 @@ import Listitem from '../listItem/Listitem'
 function Issiq() {
 
     const [data, setData] = useState([])
-    // console.log(data);
-
-    const { setCart, cart } = useContext(ProductContext)
 
     useEffect(() => {
         const getData = () => {

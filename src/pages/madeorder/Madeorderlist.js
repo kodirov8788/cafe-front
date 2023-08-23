@@ -1,12 +1,12 @@
 // import axios from 'axios'
-import axios from 'axios'
+import axios from '../../api/Api'
 import React from 'react'
 
 function Madeorderlist({ order, index }) {
 
 
     const deleteOrder = async () => {
-        return await axios.delete(`http://localhost:8000/order/delete/${order._id}`)
+        return await axios.delete(`order/delete/${order._id}`)
             .then(res => console.log(res))
             .catch(error => console.log(error))
     }

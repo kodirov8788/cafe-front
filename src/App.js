@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { ProductContext } from './context/ProductContext';
 import ReactLoading from "react-loading";
 function App() {
-  const { producttDate, addOrder } = useContext(ProductContext)
+  const { addOrder } = useContext(ProductContext)
   // console.log(producttDate);
 
   return (

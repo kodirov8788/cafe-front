@@ -1,18 +1,18 @@
-import axios from 'axios'
+import axios from '../../api/Api'
 import React from 'react'
 
 function Orderlist({ order, index }) {
 
 
     const deleteOrder = async () => {
-        await axios.delete(`http://localhost:8000/order/delete/${order._id}`)
+        await axios.delete(`order/delete/${order._id}`)
             .then(res => console.log(res))
             .catch(error => console.log(error))
     }
 
     const madeProduct = async () => {
         console.log(order._id)
-        await axios.put(`http://localhost:8000/order/made/${order._id}`)
+        await axios.put(`order/made/${order._id}`)
             .then(res => console.log(res))
             .catch(error => console.log(error))
     }

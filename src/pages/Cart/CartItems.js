@@ -4,7 +4,7 @@ import { ProductContext } from '../../context/ProductContext'
 function CartItems({ item }) {
     const { setCart, cart } = useContext(ProductContext)
 
-    console.log(cart)
+    // console.log(cart)
 
     const addCart = (item) => {
         setCart([...cart, item])
