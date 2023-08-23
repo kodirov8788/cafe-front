@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { ProductContext } from '../../context/ProductContext'
 function Menu() {
-    const { place, setPlace, places } = useContext(ProductContext)
+    const { setPlace, places } = useContext(ProductContext)
 
     // console.log(place);
     return (
