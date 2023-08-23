@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import './App.css';
-import Menu from './components/Menu/Menu';
+import Menu from './components/menu/Menu';
 import { useContext } from 'react';
 import { ProductContext } from './context/ProductContext';
 import ReactLoading from "react-loading";
