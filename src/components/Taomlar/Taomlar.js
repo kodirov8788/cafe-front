@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import './Taomlar.css'
-import img1 from "../../image/shopping-cart.png"
+// import img1 from "../../image/shopping-cart.png"
 
 import { menu_items } from "../../Static_data"
 import { Link } from 'react-router-dom'

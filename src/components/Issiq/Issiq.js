@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './Issiq.css'
-import img1 from "../../image/shopping-cart.png"
+// import img1 from "../../image/shopping-cart.png"
 
 import { menu_items } from "../../Static_data"
-import { Link } from 'react-router-dom'
-import { ProductContext } from '../../context/ProductContext'
-import { useContext } from 'react'
+// import { Link } from 'react-router-dom'
+// import { ProductContext } from '../../context/ProductContext'
+// import { useContext } from 'react'
 import Listitem from '../listItem/Listitem'
 
 

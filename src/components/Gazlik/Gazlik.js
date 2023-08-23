@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import './Gazlik.css'
-import img1 from "../../image/shopping-cart.png"
+// import img1 from "../../image/shopping-cart.png"
 import { menu_items } from "../../Static_data"
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { ProductContext } from '../../context/ProductContext';
 import Listitem from '../listItem/Listitem';
