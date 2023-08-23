@@ -3,28 +3,41 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import Issiq from './components/Issiq/Issiq';
+import Gazlik from './components/Gazlik/Gazlik';
+import Gazsiz from './components/Gazsiz/Gazsiz';
+import Taomlar from './components/Taomlar/Taomlar';
+import Cart from './pages/Cart/Cart';
+import { ContextProvider } from './context/ProductContext';
+import Navbar from './components/Navbar/Navbar';
+import Order from './pages/order/Order';
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+// import Pushers from './Pushers';
+import Madeorder from './pages/madeorder/Madeorder';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<App />} >
-          <Route path='products/issiq' element={<h1>Issiq ichimliklar</h1>} />
-          <Route path='products/gazsiz' element={<h1>gazsiz ichimliklar</h1>} />
-          <Route path='products/gazlik' element={<h1>gazlik ichimliklar</h1>} />
-          <Route path='products/taomlar' element={<h1>Taomlar</h1>} />
-        </Route>
-      </Routes>
-
+      <ContextProvider>
+        <ToastContainer />
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<App />}>
+            <Route path='products/issiq' element={<Issiq />} />
+            <Route path='products/gazlik' element={<Gazlik />} />
+            <Route path='products/gazsiz' element={<Gazsiz />} />
+            <Route path='products/taomlar' element={<Taomlar />} />
+          </Route>
+          <Route path='order' element={<Order />} />
+          <Route path='cart' element={<Cart />} />
+          <Route path='madeorder' element={<Madeorder />} />
+          {/* <Route path='pusher' element={<Pushers />} /> */}
+        </Routes>
+      </ContextProvider>
     </BrowserRouter>
-
-
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
